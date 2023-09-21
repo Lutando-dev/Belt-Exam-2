@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    image: lutand0/sample-web-app-backend
+    ports:
+      - "81:81"
+    networks:
+      - sample-web-app-network
+
+  frontend:
+    image: lutand0/sample-web-app-frontend
+    ports:
+      - "80:80"
+    networks:
+      - sample-web-app-network
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: basic3tier
+    volumes:
+      - basic-3tier-data:/var/lib/postgresql/data
+    networks:
+      - sample-web-app-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user@domain.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    depends_on:
+      - postgres
+    networks:
+      - sample-web-app-network
+
+networks:
+  sample-web-app-network:
+    driver: bridge
+
+volumes:
+  basic-3tier-data:
