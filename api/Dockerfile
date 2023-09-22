@@ -5,6 +5,7 @@ WORKDIR /App
 COPY ["api/Basic3TierAPI/Basic3TierAPI.csproj", "Basic3TierAPI/"]
 COPY ["api/Basic3Tier.Core/Basic3Tier.Core.csproj", "Basic3Tier.Core/"]
 COPY ["api/Basic3Tier.Infrastructure/Basic3Tier.Infrastructure.csproj", "Basic3Tier.Infrastructure/"]
+
 RUN dotnet restore Basic3Tier.Core/Basic3Tier.Core.csproj
 RUN dotnet build Basic3Tier.Core/Basic3Tier.Core.csproj -c Release -o out
 
@@ -20,4 +21,4 @@ WORKDIR /App
 
 COPY --from=build /App/out/ .
 
-ENTRYPOINT ["dotnet", "Basic3TierAPI.dll"]
+ENTRYPOINT ["dotnet", "/App/out/Basic3TierAPI.dll"]
