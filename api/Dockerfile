@@ -19,7 +19,7 @@ COPY api/Basic3Tier.Core/. ./Basic3Tier.Core/
 COPY api/Basic3Tier.Infrastructure/. ./Basic3Tier.Infrastructure/
 
 # Build the application
-RUN dotnet publish Basic3TierAPI/Basic3TierAPI.csproj -c Release -o out
+RUN dotnet publish Basic3TierAPI/Basic3TierAPI.csproj -c Release -o out --no-cache /restore
 
 # Build the final image using the runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
