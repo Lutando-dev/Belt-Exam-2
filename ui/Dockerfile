@@ -2,7 +2,6 @@
 FROM nginx:alpine
 
 # Set the working directory inside the container
-WORKDIR /usr/share/nginx/html
 
 # Copy the static files into the container
 COPY ./ui/* /usr/share/nginx/html
