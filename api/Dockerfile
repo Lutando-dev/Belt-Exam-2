@@ -3,6 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 
 # Set the working directory to /App
 WORKDIR /App
+EXPOSE 81
 
 # Copy the .csproj files
 COPY api/Basic3TierAPI/*.csproj ./Basic3TierAPI/
