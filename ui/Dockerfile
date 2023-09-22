@@ -5,7 +5,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Copy the static files into the container
-COPY ./ui /usr/share/nginx/html
+COPY ./ui/* /usr/share/nginx/html
 
 # Expose port 80 (the default port for Nginx)
 EXPOSE 80
