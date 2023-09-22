@@ -19,6 +19,6 @@ FROM mcr.microsoft.com/dotnet/runtime:7.0
 
 WORKDIR /App
 
-COPY --from=build /App/out/ .
+COPY --from=build /App/out/ ./
 
-ENTRYPOINT ["dotnet", "/App/out/Basic3TierAPI.dll"]
+ENTRYPOINT ["dotnet", "Basic3TierAPI.dll"]
