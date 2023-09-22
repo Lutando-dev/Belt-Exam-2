@@ -1,6 +1,6 @@
 // Wait for the document to be ready
 $(document).ready(function () {
-    const baseUrl = 'http://localhost:81/';
+    const baseUrl = 'http://localhost:80/';
     let users = [];
     let activeUser = {};
     // Function to get users from 'api/user' endpoint and display them in the table
