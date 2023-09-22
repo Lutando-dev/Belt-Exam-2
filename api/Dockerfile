@@ -6,7 +6,7 @@ ENV ASPNETCORE_URLS=http://+:5104
 
 # Set the working directory to /App
 WORKDIR /App
-EXPOSE 81
+EXPOSE 80
 
 # Copy the .csproj files
 COPY api/Basic3TierAPI/*.csproj ./Basic3TierAPI/
