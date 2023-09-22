@@ -4,6 +4,10 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 # Set the working directory to /App
 WORKDIR /App
 
+# Copy the solution file and restore NuGet packages
+COPY api/Basic3TierAPI/Basic3TierAPI.sln ./Basic3TierAPI/
+RUN dotnet restore Basic3TierAPI/Basic3TierAPI.sln
+
 # Copy the .csproj files
 COPY api/Basic3TierAPI/*.csproj ./Basic3TierAPI/
 COPY api/Basic3Tier.Core/*.csproj ./Basic3Tier.Core/
