@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  backend:
+  sample-web-app-backend:
     image: lutand0/sample-web-app-backend
     environment:
       ASPNETCORE_URLS: http://+:81
@@ -10,14 +10,14 @@ services:
     networks:
       - sample-web-app-network
 
-  frontend:
+  sample-web-app-frontend:
     image: lutand0/sample-web-app-frontend
     ports:
       - "80:80"
     networks:
       - sample-web-app-network
 
-  postgres:
+  basic-3tier-postgres:
     image: postgres:latest
     environment:
       POSTGRES_USER: postgres
@@ -28,7 +28,7 @@ services:
     networks:
       - sample-web-app-network
 
-  pgadmin:
+  pgadmin4:
     image: dpage/pgadmin4:latest
     ports:
       - "8080:80"
