@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-web-app-backend
+  template:
+    metadata:
+      labels:
+        app: sample-web-app-backend
+    spec:
+      containers:
+      - name: sample-web-app-backend
+        image: lutand0/sample-web-app-backend
+        ports:
+        - containerPort: 81
