@@ -1,4 +1,4 @@
-# Belt-Exam-2
+![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/b9bda657-5f69-4610-b525-577f862a5d35)# Belt-Exam-2
 
 Question 1
 
@@ -33,7 +33,11 @@ Question 1
    ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/194be804-f954-4073-9a6c-519f12741df0)
 
 4. Deploy pgadmin (dpage/pgadmin4:latest) for connecting to the above Postgres database.
+
    docker run --network sample-web-app-network --name pgadmin4 -p 8080:80 -e PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=admin123 -d dpage/pgadmin4:latest
+
+   ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/63e454a0-33f8-4ba4-8251-1bd8d49e5e1e)
+
 
 5. Deploy the frontend application as a docker container running on port 80
    docker run -d --name sample-web-app-frontend --network sample-web-app-network -p 80:80 lutand0/sample-web-app-frontend
@@ -80,6 +84,14 @@ Question 1
 
 
 Question 2
+
+     ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/943fd234-5b55-48d6-89f7-4c65c6794425)
+
+     ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/275526d8-5d16-4e86-8840-99f801363723)
+
+Question 3
+
+
 
 
 
