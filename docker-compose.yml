@@ -3,6 +3,8 @@ version: '3.8'
 services:
   backend:
     image: lutand0/sample-web-app-backend
+    environment:
+      - ASPNETCORE_URLS: http://+:81
     ports:
       - "81:81"
     networks:
