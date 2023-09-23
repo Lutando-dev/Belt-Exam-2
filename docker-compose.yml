@@ -41,8 +41,8 @@ services:
       - belt-exam-2_sample-web-app-network
 
 networks:
-  sample-web-app-network:
+  belt-exam-2_sample-web-app-network:
     driver: bridge
 
 volumes:
-  basic-3tier-data:
+  belt-exam-2_basic-3tier-data:
