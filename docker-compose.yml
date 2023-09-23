@@ -51,4 +51,4 @@ networks:
 
 volumes:
   basic-3tier-data:
-  name: basic-3tier-data
+    name: "basic-3tier-data"
