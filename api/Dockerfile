@@ -1,9 +1,6 @@
 # Use the official Microsoft ASP.NET Core SDK as the build image
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 
-# Set the ASPNETCORE_URLS environment variable
-ENV ASPNETCORE_URLS=http://+:5104
-
 # Set the working directory to /App
 WORKDIR /App
 EXPOSE 81
