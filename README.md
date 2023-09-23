@@ -91,6 +91,51 @@ Question 2
 
 Question 3
 
+1. Create three deployment yaml files, one each for frontend, backend, and database.
+   database-deployment
+      ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/d0942a4e-5926-4f51-ae4b-7728f46bf418)
+
+   backend-deployment
+       ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/8271ab22-fa9a-481a-9f11-8d7c1e81ab05)
+
+   frontend-deployment
+       ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/b2cd33ea-1cbd-49c6-8062-cadcb0f0d4a0)
+
+
+2.  Frontend replicas
+       [image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/7298bda0-c392-43ca-86c0-cb643dd9ce69)
+
+     Backend replicas
+
+        ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/ddbb0915-ab2f-4e1c-a715-71e110033955)
+
+     Database replicas 
+        
+         ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/15c157f6-1a8e-4148-ad01-a59ac776f844)
+
+3.  Create the required Service to expose “frontend application”
+
+    ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/e4829fae-6b9e-43af-9cb5-a65323a6eedf)
+
+4. Create the required Service to expose “backend application”
+      
+    ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/c58c6813-dfe3-4cb6-8564-ab34cbecb439)
+
+5. Create a required Service to connect frontend and backend applications
+
+    ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/4957c1fb-40fb-43ec-b0d3-abfe210c04ae)
+
+6. Create a required Service to connect the backend with the database.
+
+   ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/10f91819-03fa-4f32-a712-778b34c50314)
+
+7. Create a Nginx-Ingress to expose the frontend application.
+
+    ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/b1be97ab-cfaa-44c7-bb11-ab195a0194f2)
+
+8. As it is, I cannot deploy struggling with kubectl configiration
+
+
 
 
 
