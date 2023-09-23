@@ -81,6 +81,7 @@ Question 1
 
 Question 2
 
+1. ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/d704f696-05dc-4afb-b126-80c12696d13c)
 
 
 
