@@ -3,6 +3,7 @@ version: '3.8'
 services:
   sample-web-app-backend:
     image: lutand0/sample-web-app-backend
+    container_name: sample-web-app-backend
     environment:
       ASPNETCORE_URLS: http://+:81
     ports:
@@ -12,6 +13,7 @@ services:
 
   sample-web-app-frontend:
     image: lutand0/sample-web-app-frontend
+    container_name: sample-web-app-frontend
     ports:
       - "80:80"
     networks:
@@ -19,6 +21,7 @@ services:
 
   basic-3tier-postgres:
     image: postgres:latest
+    container_name: basic-3tier-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
@@ -30,6 +33,7 @@ services:
 
   pgadmin4:
     image: dpage/pgadmin4:latest
+    container_name: pgadmin4
     ports:
       - "8080:80"
     environment:
@@ -43,6 +47,8 @@ services:
 networks:
   sample-web-app-network:
     driver: bridge
+    name: sample-web-app-network
 
 volumes:
   basic-3tier-data:
+  name: basic-3tier-data
