@@ -8,14 +8,14 @@ services:
     ports:
       - "81:81"
     networks:
-      - belt-exam-2_sample-web-app-network
+      - sample-web-app-network
 
   frontend:
     image: lutand0/sample-web-app-frontend
     ports:
       - "80:80"
     networks:
-      - belt-exam-2_sample-web-app-network
+      - sample-web-app-network
 
   postgres:
     image: postgres:latest
@@ -24,9 +24,9 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: basic3tier
     volumes:
-      - belt-exam-2_basic-3tier-data:/var/lib/postgresql/data
+      - basic-3tier-data:/var/lib/postgresql/data
     networks:
-      - belt-exam-2_sample-web-app-network
+      - sample-web-app-network
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -38,11 +38,11 @@ services:
     depends_on:
       - postgres
     networks:
-      - belt-exam-2_sample-web-app-network
+      - sample-web-app-network
 
 networks:
-  belt-exam-2_sample-web-app-network:
+  sample-web-app-network:
     driver: bridge
 
 volumes:
-  belt-exam-2_basic-3tier-data:
+  basic-3tier-data:
