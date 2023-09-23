@@ -5,8 +5,10 @@ Question 1
 1.Write a Dockerfile to create a Docker image of the backend application and push it to the Docker registry (DockerHub or ECR).
 
   ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/7ef07f8f-7f58-4a5d-a0d9-7a5442df21ba)
+
   docker build -t lutand0/sample-web-app-backend -f ./api/Dockerfile .
   docker push lutand0/sample-web-app-backend
+
   ![image](https://github.com/Lutando-dev/Belt-Exam-2/assets/6805093/3a75640d-c727-44bf-bd21-7c1b663811a4)
 
 
